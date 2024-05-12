@@ -1,0 +1,71 @@
+.dropDown {
+    position: relative;
+    width: 4rem;
+}
+
+.dropDown-button {
+    font-size: 1.2rem;
+    border: none;
+    background: none;
+    position: relative;
+    padding: 0;
+    padding-right: 1rem;
+    z-index: 5;
+}
+
+.dropDown-button::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 0.1rem;
+    width: 0.6rem;
+    top: 40%;
+    right: 0;
+    transform: rotateZ(-45deg);
+}
+
+.dropDown-button::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 0.1rem;
+    width: 0.7rem;
+    top: 40%;
+    right: 9%;
+    transform: rotateZ(45deg);
+}
+
+.dropDown-button:hover {
+    cursor: pointer;
+}
+
+.dropDown-hiddenContent {
+    position: absolute;
+    width: inherit;
+    top: 0%;
+    z-index: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.dropDown-showContent {
+    max-height: 200px;
+    top: 100%;
+}
+
+.dropDown-hiddenContent ul {
+    margin: 0;
+    padding: 0;
+}
+
+.dropDown-hiddenContent li {
+    list-style: none;
+    padding: 0;
+    transition: 0.1s ease-in-out;
+}
+
+.dropDown-hiddenContent li:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
