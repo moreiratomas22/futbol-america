@@ -7,6 +7,11 @@
 .contactContent h2 {
     font-size: 4rem;
     width: 70%;
+    margin-bottom: 5px;
+    line-height: 4.1rem;
+}
+.contactContent h3 {
+    margin-bottom: 40px;
 }
 .contact-textInput {
     width: 480px;
@@ -54,6 +59,7 @@ input:-webkit-autofill:active {
 .contact-checkboxContainer p {
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
 
 #contactVideo {
