@@ -1,5 +1,59 @@
-.contactMain {
+.contactContent {
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    color: var(--text-color);
+}
+.contactContent h2 {
+    font-size: 4rem;
+    width: 70%;
+}
+.contact-textInput {
+    width: 480px;
+    height: 1.5rem;
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+.contact-textInput::placeholder {
+    color: var(--hover-gray);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--text-color) !important;
+}
+.contact-textAreaInput {
+    width: 480px;
+    height: 4rem;
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+.contact-textAreaInput::placeholder {
+    color: var(--hover-gray);
+}
 
+.contact-checkboxContainer {
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.7rem;
+    gap: 10px;
+}
+.contact-checkboxContainer input {
+    width: auto;
+}
+.contact-checkboxContainer p {
+    margin: 0;
+    padding: 0;
 }
 
 #contactVideo {
@@ -14,4 +68,20 @@
 .contactForm {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-submitButton {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.contact-submitButton:hover {
+    background-color: var(--hover-yellow);
 }
