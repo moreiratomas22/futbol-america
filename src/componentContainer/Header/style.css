@@ -10,9 +10,12 @@
 .title {
     font-size: 1.2rem;
 }
+.yellowColor {
+    color: var(--second-color);
+}
 .title a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
 }
 
 .navOptions {
