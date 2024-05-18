@@ -10,4 +10,9 @@
     color: var(--text-color);
     text-decoration: none;
     font-size: 1.2rem;
+    transition: 0.2s ease-in-out;
+}
+
+.navLinks a:hover {
+    color: var(--hover-gray);
 }
