@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { About, Contact, Header, Home, Services } from "./componentContainer"
+import { About, Contact, Header, Home, Services, Footer } from "./componentContainer"
 
 function App() {
 
@@ -15,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

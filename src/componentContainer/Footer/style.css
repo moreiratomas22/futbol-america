@@ -1,0 +1,37 @@
+.footer {
+    color: var(--text-color);
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.footer-contactInfo p{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-title {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.footer-smIcons  {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-copyright {
+    border-top: 2px solid var(--hover-gray);
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-copyright p{
+    font-size: 0.7rem;
+}
