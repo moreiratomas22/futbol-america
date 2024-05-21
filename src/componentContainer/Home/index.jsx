@@ -1,4 +1,4 @@
-import { FrontPage, InfiniteGallery } from "../../components"
+import { CareFuture, FrontPage, InfiniteGallery } from "../../components"
 import "./style.css"
 
 const Home = () => {
@@ -6,6 +6,7 @@ const Home = () => {
         <main>
             <FrontPage />
             <InfiniteGallery />
+            <CareFuture />
         </main>
     )
 }

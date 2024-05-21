@@ -1,0 +1,89 @@
+.careFuture-frontPage {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+    min-height: 40rem;
+}
+
+.careFuture-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.careFuture-container {
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+.careFuture-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 80px;
+    color: var(--main-color);
+}
+
+.careFuture-title {
+    font-family: Archivo Black;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.careFuture-title span {
+    color: var(--second-color);
+}
+
+.careFuture-text {
+    font-family: Roboto;
+    width: 460px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.85rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+.careFuture-items {
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+}
+.careFuture-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.careFuture-items ul li {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 120px 0;
+}
+
+.careFuture-items ul li p {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.85rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
