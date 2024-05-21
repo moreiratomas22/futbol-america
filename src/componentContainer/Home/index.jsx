@@ -1,10 +1,11 @@
+import { FrontPage } from "../../components"
 import "./style.css"
 
 const Home = () => {
     return (
-        <>
-            Home
-        </>
+        <main>
+            <FrontPage />
+        </main>
     )
 }
 

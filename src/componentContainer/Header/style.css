@@ -5,6 +5,11 @@
     width: 90%;
     max-width: 1140px;
     margin: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
 }
 
 .title {
