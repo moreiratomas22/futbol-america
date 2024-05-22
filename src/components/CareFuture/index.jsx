@@ -10,7 +10,7 @@ const CareFuture = () => {
     return (
         <section >
             <div className="careFuture-frontPage">
-                <img className="careFuture-bg" src={background} alt="" srcset="" />
+                <img className="careFuture-bg" src={background} alt="" />
                 <div className="careFuture-container">
                     <div className="careFuture-content">
                         <h2 className="careFuture-title"><span>WE CARE</span> ABOUT YOUR FUTURE</h2>

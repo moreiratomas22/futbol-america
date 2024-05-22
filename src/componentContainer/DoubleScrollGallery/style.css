@@ -1,0 +1,117 @@
+.doubleScrollGallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50vh;
+    align-items: center;
+}
+
+.doubleScrollGallery-textContainer {
+    margin-top: 50vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.doubleScrollGallery-text {
+    width: 230px;
+    color: var(--text-color);
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.85rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.doubleScrollGallery-text span {
+    color: var(--second-color);
+}
+
+.doubleScrollGallery-galleryContainer {
+    height: 100vh;
+    width: 90%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.doubleScrollGallery-galleriesTextContainer {
+    color: var(--text-color);
+    width: 30%;
+    position: relative;
+}
+
+.doubleScrollGallery-galleriesTextContainer h2 {
+    font-family: Roboto;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+    position: absolute;
+    top: -375%;
+}
+
+.doubleScrollGallery-galleriesTextContainer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.doubleScrollGallery-galleriesTextContainer li {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: -0.02em;
+    text-align: right;
+
+}
+
+.doubleScrollGallery-videoContainer {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#home-finalVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+}
+
+.doubleScrollGallery-finalDiv {
+    height: 200vh;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.doubleScrollGallery-opacity0 {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.doubleScrollGallery-opacity1 {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+
+.doubleScrollGallery-scale {
+    transform: scale(0.8);
+}

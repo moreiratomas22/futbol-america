@@ -1,0 +1,34 @@
+#loop-scroll-gallery {
+    height: 80%;
+    width: 30%;
+    overflow: hidden;
+}
+
+.scroll-gallery-wrapper {
+    width: 400px;
+    height: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    animation: 1.5s linear 1 slidein;
+}
+
+.scroll-gallery-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-gallery-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateY(120%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
