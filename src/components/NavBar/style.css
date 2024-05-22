@@ -26,3 +26,7 @@
 .navLinks a:hover {
     color: var(--hover-gray);
 }
+
+.navLinks .active {
+    color: var(--second-color);
+}
