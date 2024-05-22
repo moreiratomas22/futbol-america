@@ -1,0 +1,49 @@
+.about-frontPage-container {
+    height: 300vh;
+    width: 100%;
+    color: var(--main-color);
+    position: relative;
+}
+
+.about-frontPage-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-frontPage-content {
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.about-frontPage-title {
+    font-family: Archivo Black;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    width: 60%;
+}
+
+.about-frontPage-title span {
+    color: var(--second-color);
+}
+
+.about-frontPage-rightTextContainer {
+    float: right;
+    width: 35%;
+}
+
+.about-frontPage-text{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.2px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+.about-frontPage-text span {
+    color: var(--second-color);
+}

@@ -48,7 +48,7 @@
 
 .doubleScrollGallery-galleriesTextContainer {
     color: var(--text-color);
-    width: 30%;
+    width: 25%;
     position: relative;
 }
 
@@ -87,6 +87,7 @@
     position: sticky;
     top: 50%;
     transform: translateY(-50%);
+    margin-bottom: -25%;
 }
 
 #home-finalVideo {

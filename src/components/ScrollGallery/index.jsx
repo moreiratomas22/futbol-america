@@ -2,16 +2,7 @@ import { useEffect, useRef, useState } from "react"
 
 import "./style.css"
 
-const image1 = "https://i.blogs.es/a19bfc/testing/1366_2000.jpg"
-const image2 = "https://d3eeke16mv0lt7.cloudfront.net/sites/default/files/styles/article_hero_image/public/field/image/testing-trends-world-quality-report.jpg?itok=vUyONZsj"
-const image3 = "https://www.mtp.es/wp-content/uploads/2019/03/testing-1200x900.jpg"
-const image4 = "https://t3.ftcdn.net/jpg/03/13/42/46/360_F_313424630_Uja1TnjdFhdz0bdbFnhMRuBTSIw25TWQ.jpg"
-const image5 = "https://cdn.bap-software.net/2023/10/softwaretesting1.jpg"
-const image6 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2HHN-cN8zYS8n5c8BT-i5XA-vyZSxmz0B3DrpRfvdaw&s"
-
-const images = [image1, image2, image3, image4, image5, image6]
-
-const ScrollGallery = () => {
+const ScrollGallery = ({images}) => {
 
     const galleryContainerRef = useRef(null)
     const [imagesState, setImagesState] = useState(images)
@@ -27,18 +18,7 @@ const ScrollGallery = () => {
             galleryContainerRef.current.scrollTop = 0
             imagesLengthRef.current = images.length
         }
-        if (scrollPorcentage >= 99.89) {
-            cloneImages()
-        }
 
-    }
-
-    const cloneImages = () => {
-        setImagesState((prevImages) => {
-            const newImages = [...prevImages, ...prevImages]
-            imagesLengthRef.current = newImages.length
-            return newImages
-        })
     }
 
     const eliminateImages = () => {

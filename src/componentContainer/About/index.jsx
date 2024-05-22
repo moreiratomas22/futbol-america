@@ -1,10 +1,11 @@
+import AboutFrontPage from "../AboutFrontPage"
 import "./style.css"
 
 const About = () => {
     return (
-        <>
-            About
-        </>
+        <main>
+            <AboutFrontPage />
+        </main>
     )
 }
 
