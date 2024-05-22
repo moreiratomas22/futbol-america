@@ -1,0 +1,100 @@
+.checkpoints-container {
+    height: 100vh;
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.cp-item {
+    position: absolute;
+}
+.cp-mission {
+    top: 10%;
+    left: -1%;
+    width: 85px;
+    height: 30px;
+}
+.cp-dedication {
+    top: 21%;
+    left: 79%;
+    width: 97px;
+    height: 30px;
+}
+.cp-excellence {
+    top: 47%;
+    left: 9%;
+    width: 100px;
+    height: 30px;
+}
+.cp-vision {
+    top: 68%;
+    left: 90%;
+    width: 72px;
+    height: 30px;
+}
+.cp-values {
+    top: 86%;
+    left: 34%;
+    width: 72px;
+    height: 30px;
+}
+.cp-career {
+    top: 91%;
+    left: 84%;
+    width: 177px;
+    height: 30px;
+}
+.cp-mission:hover::after {
+    content: "Futbol America is dedicated to creating and developing solutions for sports tourism, ensuring that institutions and players receive comprehensive logistics services while upholding our commitment to socially responsible sporting events.";
+    display: block;
+    width: 300px;
+    margin-top: 30px;
+    color: var(--text-color);
+}
+
+.cp-dedication:hover::after {
+    content: "Based on our experience in the industry of soccer and our network composed by coaches, scouts, video analyst, we can always collaborate to propose the best pathways for your future in soccer. There are many angles to consider and help the player and his family to choose the right decision. Futbol America can be next to you in that specific moment of your life.";
+    display: block;
+    width: 300px;
+    margin-top: 30px;
+    color: var(--text-color);
+}
+
+.cp-excellence:hover::after {
+    content: "Our team selects hotels that cater to athletes' needs, offering differentiated room service, quality meals, and convenient locations near training fields and stadiums. With specialized expertise in sports tourism, we are always available to address any issues and provide assistance during your trip.";
+    display: block;
+    width: 300px;
+    margin-top: 30px;
+    color: var(--text-color);
+}
+
+.cp-vision:hover::after {
+    content: "Our vision is to become a benchmark in sports tourism throughout South America, setting the standard for excellence in service and customer satisfaction.";
+    display: block;
+    width: 300px;
+    margin-top: 30px;
+    color: var(--text-color);
+    position: absolute;
+    left: -160px;
+}
+
+.cp-values:hover::after {
+    content: "We are guided by principles of ethics, transparency, and socio-environmental responsibility in all aspects of our operations.";
+    display: block;
+    width: 300px;
+    margin-top: 30px;
+    color: var(--text-color);
+}
+
+.cp-career:hover::after {
+    content: "Based on our experience in the industry of soccer and our network composed by coaches, scouts, video analyst, we can always collaborate to propose the best pathways for your future in soccer. There are many angles to consider and help the player and his family to choose the right decision. Futbol America can be next to you in that specific moment of your life.";
+    display: block;
+    width: 300px;
+    margin-top: 30px;
+    color: var(--text-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
