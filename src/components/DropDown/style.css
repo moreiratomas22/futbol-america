@@ -15,6 +15,12 @@
     z-index: 5;
     color: var(--text-color);
     transition: 0.2s ease-in-out;
+    font-family: Roboto;
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.721rem;
+    letter-spacing: -0.02em;
+    text-align: left;
 }
 
 .dropDown-button:hover {
@@ -71,7 +77,13 @@
     list-style: none;
     padding: 0;
     transition: 0.1s ease-in-out;
-    color: var(--text-color)
+    color: var(--text-color);
+    font-family: Roboto;
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.721rem;
+    letter-spacing: -0.02em;
+    text-align: left;
 }
 
 .dropDown-hiddenContent li:hover {

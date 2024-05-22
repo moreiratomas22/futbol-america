@@ -6,6 +6,16 @@
     gap: 30px;
     padding: 0;
 }
+
+.navLinks li {
+    font-family: Roboto;
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1.721rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
 .navLinks a {
     color: var(--text-color);
     text-decoration: none;
