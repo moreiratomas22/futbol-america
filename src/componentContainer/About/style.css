@@ -1,0 +1,15 @@
+.about-textContainer {
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    color: var(--text-color);
+}
+
+.about-textContainer p {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    text-align: left;
+    width: 40%;
+}

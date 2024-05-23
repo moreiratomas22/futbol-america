@@ -1,0 +1,72 @@
+.timelapse-container {
+    color: var(--text-color);
+    width: 90%;
+    max-width: 1140px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.timelapse-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 16%;
+}
+
+.timelapse-card-imgContainer {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background-color: var(--main-color);
+}
+
+.timelapse-card h3 {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.4rem;
+    text-align: left;
+}
+
+.yellowTitle {
+    color: var(--second-color);
+}
+
+.timelapse-card p {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.56rem;
+    text-align: center;
+    height: 10rem;
+}
+
+.timelapse-line {
+    background-color: var(--second-color);
+    height: 3px;
+    position: absolute;
+    top: 15%;
+    z-index: 1;
+}
+
+.timelapse-line-animation {
+    animation: growUp 5s linear;
+    width: 100%;
+}
+
+@keyframes growUp {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

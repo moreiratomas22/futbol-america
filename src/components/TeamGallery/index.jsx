@@ -30,9 +30,7 @@ const TeamGallery = ({ team }) => {
     return (
         <div className="teamGallery-container">
             <div className="teamGallery-imageContainer">
-                {currentIndex > 0 && <img src={team[currentIndex - 1].img} alt="" className={horizontalAnimation} onAnimationEnd={() => setHorizontalAnimation("")} />}
                 <img src={team[currentIndex].img} alt="" className={horizontalAnimation} onAnimationEnd={() => setHorizontalAnimation("")} />
-                {currentIndex < team.length - 1 && <img src={team[currentIndex + 1].img} alt="" className={horizontalAnimation} onAnimationEnd={() => setHorizontalAnimation("")} />}
             </div>
             <div className="teamGallery-content">
                 <h3 className={`teamGallery-name ${verticalAnimation}`} onAnimationEnd={() => setVerticalAnimation("")}>{team[currentIndex].name}</h3>

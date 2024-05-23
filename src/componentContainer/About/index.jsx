@@ -1,4 +1,4 @@
-import { Checkpoints, TeamGallery } from "../../components"
+import { Checkpoints, TeamGallery, TimeLapse } from "../../components"
 import AboutFrontPage from "../AboutFrontPage"
 import "./style.css"
 import juzonImg from "../../assets/team/aldo_juzon.png"
@@ -49,6 +49,10 @@ const About = () => {
             <AboutFrontPage />
             <Checkpoints />
             <TeamGallery team={team} />
+            <div className="about-textContainer">
+                <p>Beyond the world of soccer, Futbol America Tours brings over 24 years of expertise in crafting exceptional travel experiences for a diverse range of audiences. From corporate travel solutions to seamless crew logistics and dynamic event management, our team is dedicated to ensuring every journey is effortless and memorable. With a network of reliable partners and affiliates spanning across the globe, including Argentina, Chile, and the United States, we have successfully delivered projects across various industries and sectors. Explore our comprehensive travel services below, designed to simplify your travel needs and elevate your experience to new heights. </p>
+            </div>
+            <TimeLapse />
         </main>
     )
 }
