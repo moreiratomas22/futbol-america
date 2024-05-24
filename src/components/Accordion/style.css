@@ -73,6 +73,7 @@
     background-color: var(--main-color);
     color: var(--text-color);
     position: relative;
+    box-sizing: border-box
 }
 
 .accordion-item-sideTitle h4 {
