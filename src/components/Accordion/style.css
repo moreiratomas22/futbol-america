@@ -1,0 +1,140 @@
+.accordion-container {
+    width: 90%;
+    max-width: 1140px;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.accordion-text {
+    color: var(--text-color);
+    width: 40%;
+    height: 100%;
+}
+
+.accordion-text h2 {
+    font-family: Archivo Black;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.accordion-text h2 span {
+    color: var(--second-color);
+}
+
+.accordion-text p {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.56rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.accordion-content {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: 0.4s ease-in-out;
+}
+
+.accordion-item {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transition: 0.4s ease-in-out;
+    background-color: var(--text-color);
+    display: flex;
+    position: absolute;
+}
+
+.accordion-item-sideTitle {
+    width: 40px;
+    height: 100%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--hover-gray);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+.accordion-item-sideTitle h4 {
+    transform-origin: center;
+    transform: rotateZ(-90deg);
+}
+
+.accordion-item-sideTitle p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.accordion-item-imgContainer {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.accordion-item-imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accordion-item-textContainer {
+    width: 40%;
+    height: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.accordion-item-textContainer h3 {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.56rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.accordion-item-textContainer p {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.56rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}
+
+.accordion-item-expand {
+    max-width: 100%;
+    left: 0!important;
+}
+
+.accordion-item-disappear {
+    left: 100%!important;
+}
+
+.accordion-content-move {
+    left: 0!important;
+}
