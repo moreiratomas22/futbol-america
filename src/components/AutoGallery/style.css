@@ -1,0 +1,32 @@
+.autoGallery {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.autoGallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.autoGallery-currentImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.autoGallery-nextImg {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.autoGallery-transition .autoGallery-currentImg{
+    left: -100%;
+    transition: 0.4s ease-in-out;
+}
+
+.autoGallery-transition .autoGallery-nextImg{
+    left: 0;
+    transition: 0.4s ease-in-out;
+
+}

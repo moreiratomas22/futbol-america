@@ -3,6 +3,7 @@ import "./style.css"
 import argentinaImg from "../../assets/images/bgGallery/argentina.png"
 import brazilImg from "../../assets/images/bgGallery/brazil.png"
 import AccordionContainer from "../AccordionContainer"
+import AutoGalleryContainer from "../AutoGalleryContainer"
 
 const Services = () => {
 
@@ -23,6 +24,7 @@ const Services = () => {
         <main>
             <BgGallery info={imagesAndInfo} />
             <AccordionContainer />
+            <AutoGalleryContainer />
         </main>
     )
 }
