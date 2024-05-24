@@ -1,4 +1,4 @@
-import { BgGallery } from "../../components"
+import { BgGallery, InfiniteGallery } from "../../components"
 import "./style.css"
 import argentinaImg from "../../assets/images/bgGallery/argentina.png"
 import brazilImg from "../../assets/images/bgGallery/brazil.png"
@@ -25,6 +25,7 @@ const Services = () => {
             <BgGallery info={imagesAndInfo} />
             <AccordionContainer />
             <AutoGalleryContainer />
+            <InfiniteGallery />
         </main>
     )
 }
