@@ -1,10 +1,13 @@
-import { BgGallery, InfiniteGallery, Schedules } from "../../components"
+import { BgGallery, InfiniteGallery, Schedules, Testimony } from "../../components"
 import "./style.css"
 import argentinaImg from "../../assets/images/bgGallery/argentina.png"
 import brazilImg from "../../assets/images/bgGallery/brazil.png"
 import AccordionContainer from "../AccordionContainer"
 import AutoGalleryContainer from "../AutoGalleryContainer"
 import HotelSectionContainer from "../HotelSectionContainer"
+import emilyRodriguezImg from "../../assets/testimonies/emilyRodriguez.png"
+import carlosGomezImg from "../../assets/testimonies/carlosGomez.png"
+import michaelSmithImg from "../../assets/testimonies/michaelSmith.png"
 
 const Services = () => {
 
@@ -21,6 +24,33 @@ const Services = () => {
         }
     ]
 
+    const testimony1 = {
+        title: '"Unforgettable Experience!"',
+        stars: 5,
+        desc: '"Our university soccer team had the most incredible time with Futbol America. From the moment we arrived in Argentina, everything was taken care of seamlessly. The training sessions with top division clubs were invaluable, and the cultural experiences were unforgettable. Highly recommend!"',
+        img: emilyRodriguezImg,
+        name: "Emily Rodriguez",
+        job: "Coach, University of California Soccer Team"
+    }
+
+    const testimony2 = {
+        title: '"Dream Come True!"',
+        stars: 5,
+        desc: '"Traveling to Brazil with Futbol America was a dream come true for our team. The opportunity to train with Brazilian clubs was beyond anything we could have imagined. The staff was friendly, knowledgeable, and truly went above and beyond to make our trip unforgettable. Can' + "'" + 't wait to do it again!"',
+        img: carlosGomezImg,
+        name: "Carlos Gomez",
+        job: "Player, Florida State University Soccer Team"
+    }
+
+    const testimony3 = {
+        title: '"Exceptional Service!"',
+        stars: 5,
+        desc: '"The attention to detail in planning our trip was evident, and every aspect exceeded our expectations. The training sessions were challenging yet rewarding, and the cultural immersion was an added bonus. Highly recommend for any university!!!"',
+        img: michaelSmithImg,
+        name: "Michael Smith",
+        job: "Head Coach, Stanford University Soccer Team"
+    }
+
     return (
         <main>
             <BgGallery info={imagesAndInfo} />
@@ -29,6 +59,11 @@ const Services = () => {
             <InfiniteGallery />
             <HotelSectionContainer />
             <Schedules />
+            <div className="services-testimoniesContainer">
+                <Testimony content={testimony1}/>
+                <Testimony content={testimony2}/>
+                <Testimony content={testimony3}/>
+            </div>
         </main>
     )
 }
