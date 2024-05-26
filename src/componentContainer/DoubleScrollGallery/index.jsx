@@ -61,7 +61,7 @@ const DoubleScrollGallery = () => {
                         <li>ARGENTINA →</li>
                     </ul>
                 </div>
-                <ScrollGallery images={imagesRight} />
+                <ScrollGallery images={imagesRight} inverted={true} />
             </div>
             <div ref={videoRef} className={`doubleScrollGallery-videoContainer ${isVideoAtTop ? "doubleScrollGallery-opacity1" : "doubleScrollGallery-opacity0"}`}>
                 <video autoPlay muted loop id="home-finalVideo" className={`${isFinalAtTop ? "doubleScrollGallery-scale" : ""}`}>

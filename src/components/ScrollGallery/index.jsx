@@ -1,43 +1,25 @@
 import { useEffect, useRef, useState } from "react"
 
 import "./style.css"
+import useIntersectionObserver from "../../customHook/useIntersectionObserver"
 
-const ScrollGallery = ({images}) => {
+const ScrollGallery = ({ images, inverted = false }) => {
 
     const galleryContainerRef = useRef(null)
-    const [imagesState, setImagesState] = useState(images)
-    const imagesLengthRef = useRef(images.length)
+    const galleryRef = useRef(null)
+    const isVisible = useIntersectionObserver(galleryRef, { threshold: 1 })
+    const [animationStarted, setAnimationStarted] = useState(false)
 
-    const handleScroll = () => {
-        const scrollTop = galleryContainerRef.current.scrollTop
-        const scrollHeight = galleryContainerRef.current.scrollHeight
-        const clientHeight = galleryContainerRef.current.clientHeight
-        const scrollPorcentage = (scrollTop / (scrollHeight - clientHeight) * 100)
-        if ((scrollPorcentage >= 54.5) && (imagesLengthRef.current > images.length)) {
-            eliminateImages()
-            galleryContainerRef.current.scrollTop = 0
-            imagesLengthRef.current = images.length
-        }
-
-    }
-
-    const eliminateImages = () => {
-        setImagesState((prevImages) => {
-            const newImages = prevImages.slice(0, images.length)
-            return newImages
-        })
-    }
-
-    const scrollToPosition = (position, duration) => {
+    const scrollToFinal = (duration) => {
         const container = galleryContainerRef.current;
-        const start = container.scrollTop;
-        const distance = position - start;
+        const start = inverted ? container.scrollHeight : 0;
+        const final = inverted ? 0 : container.scrollHeight;
         const startTime = performance.now();
 
         const scroll = (currentTime) => {
             const elapsedTime = currentTime - startTime;
             const scrollProgress = elapsedTime / duration;
-            container.scrollTop = start + distance * scrollProgress;
+            container.scrollTop = start + (final - start) * scrollProgress;
 
             if (elapsedTime < duration) {
                 requestAnimationFrame(scroll);
@@ -48,29 +30,24 @@ const ScrollGallery = ({images}) => {
     };
 
     useEffect(() => {
-        setTimeout(() => {
-            scrollToPosition(1320, 4000)
-        }, 1500)
-    }, [])
-
-    useEffect(() => {
-        const galleryContainer = galleryContainerRef.current
-        galleryContainer.addEventListener("scroll", handleScroll)
-        window.addEventListener("resize", () => {
-            window.location.reload();
-        })
-        return () => {
-            galleryContainer.removeEventListener("scroll", handleScroll);
-        };
-    }, [handleScroll])
+        if (!animationStarted) {
+            if (inverted) {
+                galleryContainerRef.current.scrollTop = galleryContainerRef.current.scrollHeight;
+            }
+            setTimeout(() => {
+                setAnimationStarted(true)
+                scrollToFinal(9000)
+            }, 1500)
+        }
+    }, [isVisible])
 
     return (
-        <div id="loop-scroll-gallery">
-            <div className="scroll-gallery-wrapper" ref={galleryContainerRef}>
-                {imagesState.map((image, index) => {
+        <div ref={galleryRef} id="loop-scroll-gallery">
+            <div className={`scroll-gallery-wrapper ${animationStarted && !inverted ? "scroll-gallery-wrapper-animation" : ""} ${animationStarted && inverted ? "scroll-gallery-wrapper-animation-inverted" : ""}`} ref={galleryContainerRef}>
+                {images.map((image, index) => {
                     return (
                         <div key={index} className="scroll-gallery-image-container">
-                            <img src={image} alt="" />
+                            <img src={image} alt="" loading="lazy" />
                         </div>
                     )
                 })}

@@ -11,7 +11,14 @@
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
+}
+
+.scroll-gallery-wrapper-animation {
     animation: 1.5s linear 1 slidein;
+}
+
+.scroll-gallery-wrapper-animation-inverted {
+    animation: 1.5s linear 1 slideinInverted;
 }
 
 .scroll-gallery-image-container {
@@ -27,6 +34,15 @@
 @keyframes slidein {
     0% {
         transform: translateY(120%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideinInverted {
+    0% {
+        transform: translateY(-120%);
     }
     100% {
         transform: translateY(0%);
