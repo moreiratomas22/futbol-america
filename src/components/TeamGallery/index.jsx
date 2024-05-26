@@ -33,11 +33,13 @@ const TeamGallery = ({ team }) => {
                 <img src={team[currentIndex].img} alt="" className={horizontalAnimation} onAnimationEnd={() => setHorizontalAnimation("")} />
             </div>
             <div className="teamGallery-content">
-                <h3 className={`teamGallery-name ${verticalAnimation}`} onAnimationEnd={() => setVerticalAnimation("")}>{team[currentIndex].name}</h3>
-                <p className={`teamGallery-desc ${verticalAnimation}`} onAnimationEnd={() => setVerticalAnimation("")}>{team[currentIndex].desc}</p>
+                <div className="teamGallery-infoContainer">
+                    <h3 className={`teamGallery-name ${verticalAnimation}`} onAnimationEnd={() => setVerticalAnimation("")}>{team[currentIndex].name}</h3>
+                    <p className={`teamGallery-desc ${verticalAnimation}`} onAnimationEnd={() => setVerticalAnimation("")}>{team[currentIndex].desc}</p>
+                </div>
                 <div className="teamGallery-buttons">
-                    {currentIndex > 0 && <p onClick={handleClickPrev}>←</p>}
-                    {currentIndex < team.length - 1 && <p onClick={handleClickNext}>→</p>}
+                    {currentIndex > 0 && <p className="teamGallery-buttonPrev"><span onClick={handleClickPrev}>←</span></p>}
+                    {currentIndex < team.length - 1 && <p className="teamGallery-buttonNext"><span onClick={handleClickNext}>→</span></p>}
                 </div>
             </div>
         </div>
