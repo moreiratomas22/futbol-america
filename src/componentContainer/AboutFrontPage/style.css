@@ -21,9 +21,9 @@
 
 .about-frontPage-title {
     font-family: Archivo Black;
-    font-size: 96px;
+    font-size: 6rem;
     font-weight: 400;
-    line-height: 96px;
+    line-height: 6rem;
     letter-spacing: -0.02em;
     text-align: left;
     width: 60%;
@@ -40,9 +40,9 @@
 
 .about-frontPage-text{
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 25.2px;
+    line-height: 1.575rem;
     letter-spacing: -0.02em;
     text-align: left;
 }
