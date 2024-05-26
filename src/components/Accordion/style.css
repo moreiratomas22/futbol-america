@@ -81,11 +81,39 @@
     transform: rotateZ(-90deg);
 }
 
-.accordion-item-sideTitle p {
+.accordion-item-expandButtonContainer {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
+}
+.accordion-item-expandButton-verticalLine {
+    width: 1px;
+    height: 20px;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.4s ease-in-out;
+}
+
+.accordion-item-expandButton-verticalLineisExpanded {
+    transform: translate(-50%,-50%) rotateZ(90deg);
+}
+
+.accordion-item-expandButtonHotizontalLine {
+    width: 20px;
+    height: 1px;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .accordion-item-imgContainer {

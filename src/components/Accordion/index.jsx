@@ -19,8 +19,6 @@ const Accordion = ({ items }) => {
             }
             setSomeOtherExpanded(true)
             return index
-            /*  prev === index ? null : index */
-
         })
 
     }
@@ -34,13 +32,6 @@ const Accordion = ({ items }) => {
         return place - ((11-index) * 40 )
     }
 
-    /*     useEffect(() => {
-            if (itemRefs.current[expandedIndex]) {
-                const clientLeft = itemRefs.current[expandedIndex].getBoundingClientRect().right
-                console.log(clientLeft)
-                itemRefs.current[expandedIndex].style.right = `${clientLeft}px`;
-            }
-        }, [expandedIndex]); */
 
     return (
         <section className="accordion-container">
@@ -53,7 +44,10 @@ const Accordion = ({ items }) => {
                     return (
                         <div key={index} ref={el => itemRefs.current[index] = el} className={`accordion-item ${expandedIndex === index ? "accordion-item-expand" : ""} ${(expandedIndex !== index && someOtherExpanded) ? "accordion-item-disappear" : ""}`} style={{ zIndex: index, left: `${calcPosition(index)}px` }}>
                             <div className="accordion-item-sideTitle">
-                                <p onClick={() => handleClick(index)}>MAS</p>
+                                <div className="accordion-item-expandButtonContainer" onClick={() => handleClick(index)}>
+                                    <div className={`accordion-item-expandButton-verticalLine ${expandedIndex === index ? "accordion-item-expandButton-verticalLineisExpanded" : ""}`}></div>
+                                    <div className="accordion-item-expandButtonHotizontalLine"></div>
+                                </div>
                                 <h4>{item.sideTitle}</h4>
                             </div>
                             <div className="accordion-item-imgContainer">
