@@ -4,6 +4,7 @@ import argentinaImg from "../../assets/images/bgGallery/argentina.png"
 import brazilImg from "../../assets/images/bgGallery/brazil.png"
 import AccordionContainer from "../AccordionContainer"
 import AutoGalleryContainer from "../AutoGalleryContainer"
+import HotelSectionContainer from "../HotelSectionContainer"
 
 const Services = () => {
 
@@ -26,6 +27,7 @@ const Services = () => {
             <AccordionContainer />
             <AutoGalleryContainer />
             <InfiniteGallery />
+            <HotelSectionContainer />
         </main>
     )
 }
