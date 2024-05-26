@@ -1,24 +1,31 @@
-.bgGallety-container {
+.bgGallery-container {
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-.bgGallety-bgContainer {
+.bgGallery-bgContainer {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
 }
 
-.bgGallety-container img {
+.bgGallery-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: 0.1s ease-in-out;
+    opacity: 1;
 }
 
-.bgGallety-bgContainer::after {
+.bgGallery-bgImg-off {
+    opacity: 0!important;
+}
+
+.bgGallery-bgContainer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -29,7 +36,7 @@
     z-index: 1;
 }
 
-.bgGallety-contentContainer {
+.bgGallery-contentContainer {
     width: 90%;
     height: 100%;
     max-width: 1140px;
@@ -38,24 +45,17 @@
     z-index: 2;
 }
 
-.bgGallety-content {
+.bgGallery-content {
     position: absolute;
     bottom: 5%;
     height: 60%;
     left: 0;
     color: var(--text-color);
     width: 40%;
+    height: 60%;
 }
-.bgGallety-info {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-.bgGallety-content h2 {
+
+.bgGallery-content h2 {
     font-family: Archivo Black;
     font-size: 6rem;
     font-weight: 400;
@@ -65,7 +65,7 @@
     margin-bottom: 0;
 }
 
-.bgGallety-content p {
+.bgGallery-content p {
     font-family: Roboto;
     font-size: 1.25rem;
     font-weight: 400;
@@ -74,7 +74,20 @@
     text-align: left;
 }
 
-.bgGallety-imgButtonsContainer {
+.bgGallery-info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.bgGallery-info-animation-up {
+    transform: translateY(-100%);
+}
+
+.bgGallery-imgButtonsContainer {
     position: absolute;
     bottom: 5%;
     right: 0;
@@ -87,7 +100,18 @@
     overflow: hidden;
 }
 
-.bgGallety-imgButton1 {
+.bgGallery-imgButton0 {
+    width: 55%;
+    height: 80%;
+    overflow: hidden;
+    border: 4px solid var(--hover-gray);
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+}
+
+.bgGallery-imgButton1 {
     width: 55%;
     height: 80%;
     overflow: hidden;
@@ -98,7 +122,11 @@
     left: 0;
 }
 
-.bgGallety-imgButton2 {
+.bgGallery-transition {
+    transition: 0.2s ease-in-out;
+}
+
+.bgGallery-imgButton2 {
     width: 40%;
     height: 60%;
     overflow: hidden;
@@ -107,7 +135,8 @@
     bottom: 0;
     left: 60%;
 }
-.bgGallety-imgButton3 {
+
+.bgGallery-imgButton3 {
     width: 40%;
     height: 60%;
     overflow: hidden;
