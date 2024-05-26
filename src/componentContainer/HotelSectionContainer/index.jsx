@@ -20,6 +20,7 @@ import restaurantIcon from "../../assets/icons/hotelItems/Restaurant.png"
 import spaFlowerIcon from "../../assets/icons/hotelItems/Spa Flower.png"
 import swimmingIcon from "../../assets/icons/hotelItems/Swimming.png"
 import wiFiIcon from "../../assets/icons/hotelItems/Wi-Fi.png"
+import vanImg from "../../assets/images/van.png"
 
 const HotelSectionContainer = () => {
 
@@ -85,7 +86,15 @@ const HotelSectionContainer = () => {
                 </div>
             </div>
             <div className="hotelSection-vanContainer">
+                <div className="hotelSection-van-text">
+                    <p>Our buses and vans come equipped with bathrooms, air conditioning, and DVD players for your comfort. We offer round-trip transfers between the airport and hotel, as well as transportation for friendly matches.</p>
+                </div>
+                <div className="hotelSection-van-yellowBoc">
 
+                </div>
+                <div className="hotelSection-van-imgContainer">
+                    <img src={vanImg} alt="" />
+                </div>
             </div>
         </section>
     )
