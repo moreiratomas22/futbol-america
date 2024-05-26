@@ -1,4 +1,4 @@
-import { BgGallery, InfiniteGallery } from "../../components"
+import { BgGallery, InfiniteGallery, Schedules } from "../../components"
 import "./style.css"
 import argentinaImg from "../../assets/images/bgGallery/argentina.png"
 import brazilImg from "../../assets/images/bgGallery/brazil.png"
@@ -28,6 +28,7 @@ const Services = () => {
             <AutoGalleryContainer />
             <InfiniteGallery />
             <HotelSectionContainer />
+            <Schedules />
         </main>
     )
 }
