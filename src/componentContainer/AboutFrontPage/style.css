@@ -1,5 +1,6 @@
 .about-frontPage-container {
-    height: 300vh;
+    height: 100vh;
+    min-height: 40rem;
     width: 100%;
     color: var(--main-color);
     position: relative;
@@ -7,16 +8,17 @@
 
 .about-frontPage-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: -10%;
 }
 
 .about-frontPage-content {
     width: 90%;
+    height: 100%;
     max-width: 1140px;
     margin: auto;
-    position: absolute;
-    bottom: 0;
+    position: relative;
 }
 
 .about-frontPage-title {
@@ -27,15 +29,28 @@
     letter-spacing: -0.02em;
     text-align: left;
     width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 2;
 }
 
 .about-frontPage-title span {
     color: var(--second-color);
 }
 
+.about-frontPage-leftTextContainer {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50%;
+}
+
 .about-frontPage-rightTextContainer {
-    float: right;
     width: 35%;
+    position: absolute;
+    top: 10%;
+    right: 0;
 }
 
 .about-frontPage-text{

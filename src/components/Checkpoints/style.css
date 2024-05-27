@@ -6,7 +6,6 @@
     position: relative;
     margin-top: 200px;
     margin-bottom: 200px;
-    overflow-x: scroll;
 }
 .cp-item {
     position: absolute;
@@ -98,4 +97,10 @@
     position: absolute;
     left: 0;
     top: 0;
+}
+
+@media (width < 1200px) {
+    .checkpoints-container {
+        overflow-x: scroll;
+    }
 }
