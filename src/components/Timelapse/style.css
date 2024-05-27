@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    overflow-x: scroll;
 }
 
 .timelapse-card {
@@ -15,6 +16,7 @@
     align-items: center;
     flex-direction: column;
     width: 16%;
+    min-width: 180px;
 }
 
 .timelapse-card-imgContainer {

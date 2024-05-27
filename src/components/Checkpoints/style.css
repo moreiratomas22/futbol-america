@@ -6,6 +6,7 @@
     position: relative;
     margin-top: 200px;
     margin-bottom: 200px;
+    overflow-x: scroll;
 }
 .cp-item {
     position: absolute;
