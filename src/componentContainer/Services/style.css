@@ -1,3 +1,17 @@
+.services-testimoniesSection h2 {
+    color: var(--text-color);
+    font-family: Archivo Black;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.services-testimoniesSection h2 span {
+    color: var(--second-color);
+}
+
 .services-testimoniesContainer {
     width: 90%;
     height: auto;

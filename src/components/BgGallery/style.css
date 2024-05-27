@@ -73,7 +73,6 @@
     line-height: 1.56rem;
     letter-spacing: -0.02em;
     text-align: left;
-    overflow-y: scroll;
 }
 
 .bgGallery-info {
@@ -148,6 +147,11 @@
     left: 100%;
 }
 
+@media (width < 800px) {
+    .bgGallery-content p {
+        overflow-y: scroll;
+    }
+}
 @media (width < 666px) {
     .bgGallery-content h2 {
         font-size: 4rem;
