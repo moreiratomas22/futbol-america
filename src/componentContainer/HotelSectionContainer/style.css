@@ -7,6 +7,7 @@
 .hotelSection-hotelContainer {
     width: 100%;
     height: 100vh;
+    min-height: 60rem;
     position: relative;
 }
 
@@ -118,6 +119,7 @@
     align-items: center;
     position: absolute;
     right: 0;
+    bottom: 0;
 }
 
 .hotelSection-buttons-text {
@@ -137,6 +139,7 @@
 .hotelSection-vanContainer {
     width: 100%;
     height: 60vh;
+    min-height: 40rem;
     position: relative;
 }
 
@@ -156,7 +159,7 @@
 
 .hotelSection-van-yellowBoc {
     width: 40%;
-    height: 60%;
+    height: 50%;
     position: absolute;
     bottom: 50%;
     left: 30%;

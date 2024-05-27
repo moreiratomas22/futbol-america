@@ -2,6 +2,7 @@
     width: 90%;
     max-width: 1140px;
     height: 80vh;
+    min-height: 48rem;
     display: flex;
     position: relative;
     margin: 40px auto;
@@ -166,4 +167,10 @@
 
 .accordion-content-move {
     left: 0!important;
+}
+
+@media (width < 970px) {
+    .accordion-container {
+        min-height: 70rem;
+    }
 }

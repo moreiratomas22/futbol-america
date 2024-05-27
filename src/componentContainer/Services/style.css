@@ -1,10 +1,11 @@
 .services-testimoniesContainer {
     width: 90%;
-    height: 40rem;
+    height: auto;
     max-width: 1140px;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
