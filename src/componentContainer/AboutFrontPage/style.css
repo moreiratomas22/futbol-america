@@ -1,6 +1,6 @@
 .about-frontPage-container {
     height: 100vh;
-    min-height: 40rem;
+    min-height: 57rem;
     width: 100%;
     color: var(--main-color);
     position: relative;
@@ -29,10 +29,7 @@
     letter-spacing: -0.02em;
     text-align: left;
     width: 60%;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    z-index: 2;
+    margin-bottom: 0;
 }
 
 .about-frontPage-title span {
@@ -41,7 +38,7 @@
 
 .about-frontPage-leftTextContainer {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 0;
     width: 50%;
 }
@@ -49,7 +46,7 @@
 .about-frontPage-rightTextContainer {
     width: 35%;
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 0;
 }
 

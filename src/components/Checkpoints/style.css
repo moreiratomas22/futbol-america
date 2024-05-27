@@ -1,7 +1,6 @@
 .checkpoints-container {
-    height: 100vh;
-    width: 90%;
-    max-width: 1140px;
+    height: 1080px;
+    width: 1140px;
     margin: auto;
     position: relative;
     margin-top: 200px;
@@ -11,37 +10,37 @@
     position: absolute;
 }
 .cp-mission {
-    top: 10%;
+    top: 9%;
     left: -1%;
     width: 85px;
     height: 30px;
 }
 .cp-dedication {
-    top: 21%;
+    top: 18%;
     left: 79%;
     width: 97px;
     height: 30px;
 }
 .cp-excellence {
-    top: 47%;
+    top: 40%;
     left: 9%;
     width: 100px;
     height: 30px;
 }
 .cp-vision {
-    top: 68%;
+    top: 58%;
     left: 90%;
     width: 72px;
     height: 30px;
 }
 .cp-values {
-    top: 86%;
+    top: 73%;
     left: 34%;
     width: 72px;
     height: 30px;
 }
 .cp-career {
-    top: 91%;
+    top: 78%;
     left: 84%;
     width: 177px;
     height: 30px;
@@ -99,7 +98,7 @@
     top: 0;
 }
 
-@media (width < 1200px) {
+@media (width < 1140px) {
     .checkpoints-container {
         overflow-x: scroll;
     }
