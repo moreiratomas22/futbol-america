@@ -33,11 +33,16 @@ const ScrollGallery = ({ images, inverted = false }) => {
         if (!animationStarted) {
             if (inverted) {
                 galleryContainerRef.current.scrollTop = galleryContainerRef.current.scrollHeight;
-            }
-            setTimeout(() => {
                 setAnimationStarted(true)
-                scrollToFinal(9000)
-            }, 1500)
+                setTimeout(() => {
+                    scrollToFinal(9000)
+                }, 0)
+            } else {
+                setAnimationStarted(true)
+                setTimeout(() => {
+                    scrollToFinal(9000)
+                }, 1500)
+            }
         }
     }, [isVisible])
 

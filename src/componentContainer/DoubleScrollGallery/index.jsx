@@ -53,16 +53,20 @@ const DoubleScrollGallery = () => {
                 <p className="doubleScrollGallery-text">At <span>Futbol</span> America, we are dedicated to providing university soccer teams with comprehensive and unforgettable experiences in Argentina and Brazil.</p>
             </div>
             <div ref={galleriesRef} className={`doubleScrollGallery-galleryContainer ${isGalleryAtTop && !isVideoAtTop ? "doubleScrollGallery-opacity1" : "doubleScrollGallery-opacity0"}`}>
-                <ScrollGallery images={imagesLeft} />
-                <div className='doubleScrollGallery-galleriesTextContainer'>
-                    <h2>CHOOSE YOUR DESTINATION</h2>
-                    <ul>
-                        <li>← BRAZIL</li>
-                        <li>ARGENTINA →</li>
-                    </ul>
-                    <div></div>
-                </div>
-                <ScrollGallery images={imagesRight} inverted={true} />
+                {isGalleryAtTop && (
+                    <>
+                        <ScrollGallery images={imagesLeft} />
+                        <div className='doubleScrollGallery-galleriesTextContainer'>
+                            <h2>CHOOSE YOUR DESTINATION</h2>
+                            <ul>
+                                <li>← BRAZIL</li>
+                                <li>ARGENTINA →</li>
+                            </ul>
+                        </div>
+                        <ScrollGallery images={imagesRight} inverted={true} />
+
+                    </>
+                )}
             </div>
             <div ref={videoRef} className={`doubleScrollGallery-videoContainer ${isVideoAtTop ? "doubleScrollGallery-opacity1" : "doubleScrollGallery-opacity0"}`}>
                 <video autoPlay muted loop id="home-finalVideo" className={`${isFinalAtTop ? "doubleScrollGallery-scale" : ""}`}>
