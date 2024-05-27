@@ -1,6 +1,8 @@
 .home-frontPage {
     width: 100%;
+    min-height: 62.5rem;
     height: 100vh;
+    position: relative;
 }
 
 .home-frontPage-container {
@@ -22,7 +24,6 @@
 }
 
 .home-frontPage-content {
-    width: 1000px;
     color: var(--text-color);
     margin-bottom: 6rem;
     position: absolute;
@@ -46,7 +47,6 @@
 
 .home-frontPage-text {
     font-family: Roboto;
-    width: 460px;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.85rem;
@@ -59,4 +59,14 @@
     gap: 24px;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (width < 400px) {
+    .home-frontPage-title {
+        font-size: 5rem;
+    }
+    .home-frontPage-content {
+        margin-bottom: 4rem;
+    }
 }

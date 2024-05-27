@@ -60,6 +60,7 @@ const DoubleScrollGallery = () => {
                         <li>← BRAZIL</li>
                         <li>ARGENTINA →</li>
                     </ul>
+                    <div></div>
                 </div>
                 <ScrollGallery images={imagesRight} inverted={true} />
             </div>

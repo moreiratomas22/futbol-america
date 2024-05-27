@@ -5,6 +5,7 @@
     list-style: none;
     gap: 30px;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .navLinks li {

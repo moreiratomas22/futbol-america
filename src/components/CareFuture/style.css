@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     height: 90vh;
-    min-height: 40rem;
+    min-height: 50rem;
 }
 
 .careFuture-bg {
@@ -29,6 +29,7 @@
     left: 0;
     margin-bottom: 80px;
     color: var(--main-color);
+    width: 100%;
 }
 
 .careFuture-title {
@@ -47,7 +48,6 @@
 
 .careFuture-text {
     font-family: Roboto;
-    width: 460px;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.85rem;
@@ -57,7 +57,8 @@
 .careFuture-items {
     width: 90%;
     max-width: 1140px;
-    margin: auto;
+    height: 30rem;
+    margin: 120px auto;
 }
 .careFuture-items ul {
     list-style-type: none;
@@ -66,17 +67,18 @@
     color: var(--text-color);
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .careFuture-items ul li {
     width: 25%;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 120px 0;
 }
 
 .careFuture-items ul li p {
@@ -86,4 +88,10 @@
     line-height: 1.85rem;
     letter-spacing: -0.02em;
     text-align: center;
+}
+
+@media (width < 450px) {
+    .careFuture-title {
+        font-size: 4rem;
+    }
 }

@@ -49,7 +49,11 @@
 .doubleScrollGallery-galleriesTextContainer {
     color: var(--text-color);
     width: 25%;
-    position: relative;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .doubleScrollGallery-galleriesTextContainer h2 {
@@ -59,16 +63,17 @@
     line-height: 2.8rem;
     letter-spacing: -0.02em;
     text-align: center;
-    position: absolute;
-    top: -375%;
 }
 
 .doubleScrollGallery-galleriesTextContainer ul {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .doubleScrollGallery-galleriesTextContainer li {
@@ -78,7 +83,10 @@
     line-height: 1.8rem;
     letter-spacing: -0.02em;
     text-align: right;
+}
 
+.doubleScrollGallery-galleriesTextContainer div {
+    height: 25%;
 }
 
 .doubleScrollGallery-videoContainer {
