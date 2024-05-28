@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./style.css"
+import Button from "../Button"
 
 const BgGallery = ({ info }) => {
 
@@ -27,15 +28,18 @@ const BgGallery = ({ info }) => {
                 })}
             </div>
             <div className="bgGallery-contentContainer">
-                <div className="bgGallery-content">
-                    {items.map((item, index) => {
-                        return (
-                            <div className={`bgGallery-info ${animation ? "bgGallery-info-animation-up bgGallery-transition " : ""}`} key={index}>
-                                <h2>{item.title}</h2>
-                                <p>{item.desc}</p>
-                            </div>
-                        )
-                    })}
+                <div className="bgGallery-contentAndButton">
+                    <div className="bgGallery-content">
+                        {items.map((item, index) => {
+                            return (
+                                <div className={`bgGallery-info ${animation ? "bgGallery-info-animation-up bgGallery-transition " : ""}`} key={index}>
+                                    <h2>{item.title}</h2>
+                                    <p>{item.desc}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <Button className="bgGallery-button-JoinUs" toLink={"/contact"} title="Join Us" />
                 </div>
                 <div className="bgGallery-imgButtonsContainer">
                     <div className={`${animation ? "bgGallery-imgButton0 bgGallery-transition" : "bgGallery-imgButton1"}`}>

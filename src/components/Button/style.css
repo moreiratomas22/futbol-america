@@ -13,10 +13,17 @@
     letter-spacing: -0.02em;
     text-align: justified;
     font-family: Roboto;
+    transition: 0.2s ease-in-out;
 }
 .button-white {
     background-color: var(--text-color);
 }
+.button-white:hover {
+    background-color: var(--hover-gray);
+}
 .button-yellow {
     background-color: var(--second-color);
+}
+.button-yellow:hover {
+    background-color: var(--hover-yellow);
 }

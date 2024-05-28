@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom"
 import "./style.css"
 
-const Button = ({title, white}) => {
+const Button = ({ title, white, toLink }) => {
 
     return (
-        <button className={`button ${white ? "button-white" : "button-yellow"}`}>
-            {title}
-        </button>
+        <Link to={toLink}>
+            <button className={`button ${white ? "button-white" : "button-yellow"}`}>
+                {title}
+            </button>
+        </Link>
     )
 }
 

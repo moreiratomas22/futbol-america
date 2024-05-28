@@ -14,8 +14,8 @@ const FrontPage = () => {
                     <h1 className="home-frontPage-title">DIVE INTO OUR WORLD</h1>
                     <p className="home-frontPage-text">Your gateway to unforgettable soccer experiences in Argentina and Brazil.</p>
                     <div className="home-frontPage-buttonContainer">
-                        <Button title="Our Packages" white={true} />
-                        <Button title="Join Us" white={false} />
+                        <Button toLink={"/services"} title="Our Packages" white={true} />
+                        <Button toLink={"/contact"} title="Join Us" white={false} />
                     </div>
                 </div>
             </div>
