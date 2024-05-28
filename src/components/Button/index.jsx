@@ -3,8 +3,12 @@ import "./style.css"
 
 const Button = ({ title, white, toLink }) => {
 
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
-        <Link to={toLink}>
+        <Link to={toLink} onClick={handleLinkClick}>
             <button className={`button ${white ? "button-white" : "button-yellow"}`}>
                 {title}
             </button>

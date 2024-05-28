@@ -5,6 +5,19 @@
     margin: auto;
 }
 
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline;
+}
+
 .footer-contactInfo p {
     margin: 0;
     padding: 0;
