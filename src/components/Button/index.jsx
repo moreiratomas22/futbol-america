@@ -8,7 +8,7 @@ const Button = ({ title, white, toLink }) => {
     };
 
     return (
-        <Link to={toLink} onClick={handleLinkClick}>
+        <Link to={toLink} onClick={handleLinkClick} className="buttonLink">
             <button className={`button ${white ? "button-white" : "button-yellow"}`}>
                 {title}
             </button>
