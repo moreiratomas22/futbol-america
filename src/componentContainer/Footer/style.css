@@ -1,8 +1,7 @@
 .footer {
     color: var(--text-color);
-    width: 90%;
-    max-width: 1140px;
-    margin: auto;
+    width: auto;
+    margin: auto 80px;
 }
 
 .footer a {
@@ -31,37 +30,94 @@
 .footer-title {
     text-align: center;
     font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    margin: 0;
+
 }
 
 .footer-smIcons {
     display: flex;
-    gap: 30px;
-    align-items: center;
+    gap: 24px;
+    align-items: flex-end;
     justify-content: flex-end;
     flex-wrap: wrap;
+    height: 100%;
+    margin: 0;
 }
 
 .footer-copyright {
     border-top: 2px solid var(--hover-gray);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
+    height: 94px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-copyright p {
-    font-size: 0.7rem;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
 }
 
-@media (width < 400px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+@media (799px < width < 1025px) {
+    .footer {
+        margin: auto 40px;
     }
 
     .footer-title {
-        text-align: left;
+        font-size: 1rem;
+    }
+
+    .footer-copyright p {
+        font-size: 10px;
+        line-height: 12.1px;
+    }
+}
+
+@media (width < 800px) {
+    .footer {
+        margin: auto 16px;
+    }
+
+    .footer-copyright {
+        border: none;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr 1fr; /* Definir tres columnas en lugar de cuatro */
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title title title" /* Área para el título */
+            "info . sm";
+    }
+    
+    .footer-contactInfo {
+        grid-area: info;
+    }
+    
+    .footer-title-link {
+        grid-area: title;
+        border-bottom: 1px solid var(--text-color)!important;
+        padding-bottom: 16px!important;
+        margin-bottom: 16px!important;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+        line-height: 1.172rem;
     }
 
     .footer-smIcons {
-        justify-content: flex-start;
+        grid-area: sm;
+    }
+    .footer-copyright {
+        height: 50px;
     }
 }

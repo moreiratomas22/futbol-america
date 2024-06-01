@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1440px;
     margin-top: 24px;
     position: absolute;
     top: 0;
@@ -38,15 +37,6 @@
     gap: 41px;
     flex-wrap: wrap;
     margin-right: 80px;
-}
-
-@media (width > 1440px) {
-    .title {
-        margin-left: 0;
-    }
-    .navOptions {
-        margin-right: 0;
-    }
 }
 
 @media (799px < width < 1025px) {
