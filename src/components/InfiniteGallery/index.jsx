@@ -58,13 +58,16 @@ const InfiniteGallery = () => {
 
     return (
         <div className='tag-list'>
-            {[...new Array(ROWS)].map((_, i) => (
-                <InfiniteLoopSlider key={i} duration={random(DURATION - 5000, DURATION + 5000)} reverse={i % 2}>
-                    {shuffle(TAGS).slice(0, TAGS_PER_ROW).map(tag => (
-                        <Tag text={tag} key={tag} />
-                    ))}
-                </InfiniteLoopSlider>
-            ))}
+            <h2 className="tag-list-title">Official Sponsors</h2>
+            <div className="tag-list-wrapper">
+                {[...new Array(ROWS)].map((_, i) => (
+                    <InfiniteLoopSlider key={i} duration={random(DURATION - 5000, DURATION + 5000)} reverse={i % 2}>
+                        {shuffle(TAGS).slice(0, TAGS_PER_ROW).map(tag => (
+                            <Tag text={tag} key={tag} />
+                        ))}
+                    </InfiniteLoopSlider>
+                ))}
+            </div>
             <div className='fade' />
         </div>
     )
