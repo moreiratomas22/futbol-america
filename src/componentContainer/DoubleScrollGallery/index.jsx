@@ -55,7 +55,11 @@ const DoubleScrollGallery = () => {
             <div ref={galleriesRef} className={`doubleScrollGallery-galleryContainer ${isGalleryAtTop && !isVideoAtTop ? "doubleScrollGallery-opacity1" : "doubleScrollGallery-opacity0"}`}>
                 {isGalleryAtTop && (
                     <>
-                        <ScrollGallery images={imagesLeft} />
+                        <h2 className='doubleScrollGallery-titleTablet'>CHOOSE YOUR DESTINATION</h2>
+                        <div className='doubleScrollGallery-galleryWrapper'>
+                            <ScrollGallery images={imagesLeft} />
+                            <h3>Brazil</h3>
+                        </div>
                         <div className='doubleScrollGallery-galleriesTextContainer'>
                             <h2>CHOOSE YOUR DESTINATION</h2>
                             <ul>
@@ -63,7 +67,10 @@ const DoubleScrollGallery = () => {
                                 <li>ARGENTINA →</li>
                             </ul>
                         </div>
-                        <ScrollGallery images={imagesRight} inverted={true} />
+                        <div className='doubleScrollGallery-galleryWrapper'>
+                            <ScrollGallery images={imagesRight} inverted={true} />
+                            <h3>Argentina</h3>
+                        </div>
 
                     </>
                 )}
