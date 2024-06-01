@@ -24,7 +24,7 @@ const About = () => {
         },
         {
             img: juzonImg,
-            name: "Aldo Juzon",
+            name: "Aldo Guzon",
             desc: "Joined in 2019, Aldo arrived at Futbol America with one mission: improved the unbeatable. Prepare to be prepared. Graduated in Business Administration and Marketing, he became the heart of the company. Seriousness, quality, and precision.These are the words for his  hard work and commitment. His department responsability is to make participants receive the expected and beyond. Along with the rest of the team, create memories that will be taken for a lifetime."
         },
         {
