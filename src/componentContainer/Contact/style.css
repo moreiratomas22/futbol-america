@@ -1,30 +1,50 @@
 .contactContent {
-    width: 90%;
-    max-width: 1140px;
-    margin: auto;
+    width: auto;
+    height: 100%;
+    margin: 84px 80px;
     color: var(--text-color);
 }
+
 .contactContent h2 {
-    font-size: 4rem;
-    width: 70%;
+    font-size: 6rem;
+    width: 90%;
     margin-bottom: 5px;
-    line-height: 4.1rem;
+    line-height: 6.25rem;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    text-align: left;
 }
+
 .contactContent h3 {
-    margin-bottom: 40px;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.513rem;
+    text-align: left;
+    margin-bottom: 64px;
 }
+
 .contact-textInput {
-    width: 480px;
-    height: 1.5rem;
+    width: 100%;
+    height: 2.438rem;
     background: none;
     color: var(--text-color);
     border: 1px solid var(--text-color);
     border-radius: 3px;
     padding: 5px 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.318rem;
+    text-align: left;
+    margin-bottom: 18px;
+    box-sizing: border-box;
 }
+
 .contact-textInput::placeholder {
     color: var(--hover-gray);
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -32,63 +52,155 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: var(--text-color) !important;
 }
+
 .contact-textAreaInput {
-    width: 480px;
-    height: 4rem;
+    width: 100%;
+    height: 8.813rem;
     background: none;
     color: var(--text-color);
     border: 1px solid var(--text-color);
     border-radius: 3px;
     padding: 5px 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.318rem;
+    text-align: left;
+    margin-bottom: 30px;
+    box-sizing: border-box;
 }
+
 .contact-textAreaInput::placeholder {
     color: var(--hover-gray);
 }
 
 .contact-checkboxContainer {
-    width: 480px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     font-size: 0.7rem;
     gap: 10px;
+    margin-bottom: 30px;
 }
-.contact-checkboxContainer input {
-    width: auto;
+
+.contact-checkboxContainer input[type="checkbox"] {
+    border: none;
+    outline: none;
+    transform: scale(1.0769);
 }
+
 .contact-checkboxContainer p {
     margin: 0;
     padding: 0;
-    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.945rem;
+    text-align: left;
 }
 
-#contactVideo {
+.contact-videoContainer {
     width: 100%;
     height: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     z-index: -1;
+    overflow: hidden;
+}
+
+#contactVideo {
+    width: 126%;
+    height: 100%;
     object-fit: cover;
 }
 
 .contactForm {
+    width: 531px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
 }
 
-.contact-submitButton {
-    background-color: var(--second-color);
-    color: var(--main-color);
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
+@media (799px < width < 1025px) {
+    .contactContent {
+        margin: 248px 40px;
+        margin-bottom: auto;
+    }
+
+    .contactContent h2 {
+        font-size: 4rem;
+        line-height: 4.563rem;
+    }
+
+    .contactContent h3 {
+        font-size: 1rem;
+        line-height: 1.21rem;
+        margin-bottom: 72px;
+    }
+
+    .contact-textInput {
+        font-size: 1rem;
+        line-height: 1.172rem;
+    }
+
+    .contact-textAreaInput {
+        font-size: 1rem;
+        line-height: 1.172rem;
+    }
+
+    .contact-checkboxContainer input[type="checkbox"] {
+        transform: scale(1.538);
+    }
+
+    .contact-checkboxContainer {
+        gap: 15px;
+    }
+
+    .contactForm {
+        margin-bottom: 312px;
+    }
 }
-.contact-submitButton:hover {
-    background-color: var(--hover-yellow);
+
+@media (width < 800px) {
+    .contactContent {
+        margin: 167px 16px;
+        margin-bottom: auto;
+    }
+    .contactContent h2 {
+        font-size: 2.5rem;
+        line-height: 2.72rem;
+    }
+    .contactContent h3 {
+        font-size: 1rem;
+        line-height: 1.21rem;
+        margin-bottom: 26px;
+    }
+    .contactForm {
+        width: 100%;
+        margin-bottom: 167px;
+    }
+    .contact-textInput {
+        font-size: 0.875rem;
+        line-height: 1.026rem;
+    }
+
+    .contact-textAreaInput {
+        font-size: 0.875rem;
+        line-height: 1.026rem;
+        margin-bottom: 18px;
+    }
+    .contact-checkboxContainer input[type="checkbox"] {
+        transform: scale(1.923);
+    }
+    .contact-checkboxContainer {
+        gap: 10px;
+        margin-bottom: 34px;
+    }
+    .contact-checkboxContainer p {
+        font-size: 0.625rem;
+        line-height: 0.788rem;
+    }
 }

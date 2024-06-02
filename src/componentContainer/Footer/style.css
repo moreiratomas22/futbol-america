@@ -91,22 +91,25 @@
     }
 
     .footer-content {
-        grid-template-columns: 1fr 1fr 1fr; /* Definir tres columnas en lugar de cuatro */
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Definir tres columnas en lugar de cuatro */
         grid-template-rows: auto auto;
         grid-template-areas:
-            "title title title" /* Área para el título */
+            "title title title"
+            /* Área para el título */
             "info . sm";
     }
-    
+
     .footer-contactInfo {
         grid-area: info;
     }
-    
+
     .footer-title-link {
         grid-area: title;
-        border-bottom: 1px solid var(--text-color)!important;
-        padding-bottom: 16px!important;
-        margin-bottom: 16px!important;
+        border-bottom: 1px solid var(--text-color) !important;
+        padding-bottom: 16px !important;
+        margin-bottom: 16px !important;
     }
 
     .footer-title {
@@ -117,6 +120,7 @@
     .footer-smIcons {
         grid-area: sm;
     }
+
     .footer-copyright {
         height: 50px;
     }
