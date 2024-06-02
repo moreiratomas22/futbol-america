@@ -35,11 +35,11 @@ const BgGallery = ({ info }) => {
                                 <div className={`bgGallery-info ${animation ? "bgGallery-info-animation-up bgGallery-transition " : ""}`} key={index}>
                                     <h2>{item.title}</h2>
                                     <p>{item.desc}</p>
+                                    <Button className="bgGallery-button-JoinUs" toLink={"/contact"} title="Join Us" />
                                 </div>
                             )
                         })}
                     </div>
-                    <Button className="bgGallery-button-JoinUs" toLink={"/contact"} title="Join Us" />
                 </div>
                 <div className="bgGallery-imgButtonsContainer">
                     <div className={`${animation ? "bgGallery-imgButton0 bgGallery-transition" : "bgGallery-imgButton1"}`}>
