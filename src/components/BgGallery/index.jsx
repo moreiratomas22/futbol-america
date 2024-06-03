@@ -53,6 +53,29 @@ const BgGallery = ({ info }) => {
                     </div>
                 </div>
             </div>
+            <div className="bgGallery-phone-bgContainer">
+                <div className="bgGallery-phone-titleAndButtonsContainer">
+                    <div className="bgGallery-phone-bgImgContainer">
+                        <img className={animation ? "bgGallery-bgImg-off" : ""} src={items[0].img} alt="" />
+                    </div>
+                    <h2 className={animation ? "bgGallery-bgImg-off" : ""}>{items[0].title}</h2>
+                    <div className="bgGallery-phone-imgButtonsContainer">
+                        <div className={`${animation ? "bgGallery-imgButton0 bgGallery-transition" : "bgGallery-imgButton1"}`}>
+                            <img src={items[0].img} alt="" />
+                        </div>
+                        <div className={`${animation ? "bgGallery-imgButton1 bgGallery-transition" : "bgGallery-imgButton2"}`}>
+                            <img onClick={handleClick} src={items[1].img} alt="" />
+                        </div>
+                        <div className={`${animation ? "bgGallery-imgButton2 bgGallery-transition" : "bgGallery-imgButton3"}`}>
+                            <img onClick={handleClick} src={items[0].img} alt="" />
+                        </div>
+                    </div>
+                </div>
+                <p className={animation ? "bgGallery-bgImg-off" : ""}>{items[0].desc}</p>
+                <div className="bgGallery-button-JoinUsContainer">
+                    <Button toLink={"/contact"} title="Join Us" />
+                </div>
+            </div>
         </div>
     )
 }
