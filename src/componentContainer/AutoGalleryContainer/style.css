@@ -8,11 +8,13 @@
 @media (799px < width < 1025px) {
     .autoGallery-section {
         margin: 110px 40px;
+        min-height: 583px;
     }
 }
 
 @media (width < 800px) {
     .autoGallery-section {
         margin: 60px 16px;
+        min-height: 538px;
     }
 }
