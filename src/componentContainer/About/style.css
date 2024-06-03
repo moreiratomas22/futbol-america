@@ -1,15 +1,44 @@
 .about-textContainer {
-    width: 90%;
-    max-width: 1140px;
-    margin: auto;
+    margin-top: 297px;
+    margin-left: 80px;
+    margin-right: 80px;
     color: var(--text-color);
 }
 
 .about-textContainer p {
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.6rem;
+    line-height: 1.575rem;
     text-align: left;
-    width: 40%;
+    width: 580px;
+    margin: 0;
+}
+
+@media (799px < width < 1025px) {
+    .about-textContainer {
+        margin-top: 315px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .about-textContainer p {
+        font-size: 1rem;
+        line-height: 1.26rem;
+        width: 507px;
+    }
+}
+
+@media (width < 800px) {
+    .about-textContainer {
+        margin-top: 164px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .about-textContainer p {
+        font-size: 1rem;
+        line-height: 1.26rem;
+        width: 100%;
+    }
 }
