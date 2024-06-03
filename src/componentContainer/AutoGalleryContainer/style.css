@@ -1,6 +1,18 @@
 .autoGallery-section {
-    width: 80%;
-    max-width: 1140px;
+    width: auto;
+    margin: 74px 80px;
     height: 80vh;
-    margin: auto;
+    min-height: 900px;
+}
+
+@media (799px < width < 1025px) {
+    .autoGallery-section {
+        margin: 110px 40px;
+    }
+}
+
+@media (width < 800px) {
+    .autoGallery-section {
+        margin: 60px 16px;
+    }
 }
