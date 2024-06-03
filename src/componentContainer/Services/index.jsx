@@ -46,7 +46,7 @@ const Services = () => {
             <BgGallery info={imagesAndInfo} />
             <AccordionContainer />
             <AutoGalleryContainer />
-            <InfiniteGallery />
+            <InfiniteGallery hasTitle={false} />
             <HotelSectionContainer />
             <Schedules />
             <section className="services-testimoniesSection">
