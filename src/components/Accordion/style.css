@@ -1,7 +1,7 @@
 .accordion-container {
     width: auto;
     margin-top: 57px;
-    height: 56rem;
+    min-height: 56rem;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -211,11 +211,17 @@
 }
 
 @media (width < 800px) {
+    .accordion-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
     .accordion-content {
         display: none;
     }
 
     .accordion-text {
+        width: auto;
         margin-left: 16px;
         margin-right: 16px;
     }
@@ -226,5 +232,12 @@
         margin-bottom: 40px;
     }
 
-    .accordion-text p {}
+    .accordion-text p {
+        margin-bottom: 44px;
+    }
+
+    .accordion-phone-contentContainer {
+        margin: auto 16px;
+    }
+
 }

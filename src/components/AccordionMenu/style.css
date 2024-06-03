@@ -1,0 +1,45 @@
+.accordionMenu-titleContainer {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.accordionMenu-titleContainer h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.26rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 0;
+}
+
+.accordionMenu-textContainer {
+    color: var(--main-color);
+    background-color: var(--text-color);
+    transition: 0.2s ease-in-out;
+}
+
+.accordionMenu-textContainer p {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.26rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 41px;
+}
+
+.accordionMenu-titleContainer-selected {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 import "./style.css"
+import AccordionMenu from "../AccordionMenu";
 
 const Accordion = ({ items }) => {
 
@@ -62,9 +63,9 @@ const Accordion = ({ items }) => {
                         )
                     })}
                 </div>
-                <div className="accordion-phone-contentContainer">
-
-                </div>
+            </div>
+            <div className="accordion-phone-contentContainer">
+                <AccordionMenu items={items} />
             </div>
         </section>
     )
