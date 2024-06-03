@@ -170,6 +170,10 @@
     left: 0 !important;
 }
 
+.accordion-phone-contentContainer {
+    display: none;
+}
+
 @media (799px < width < 1440px) {
     .accordion-container {
         height: fit-content;
