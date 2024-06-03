@@ -412,4 +412,7 @@
     .hotelSection-van-imgContainer-phone img {
         width: 100%;
     }
+    .hotelSection-vanContainer {
+        height: auto;
+    }
 }
