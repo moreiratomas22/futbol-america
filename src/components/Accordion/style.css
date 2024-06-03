@@ -174,9 +174,11 @@
     .accordion-container {
         height: fit-content;
     }
+
     .accordion-container {
         flex-direction: column;
     }
+
     .accordion-contentContainer {
         width: 100%;
         height: 896px;
@@ -188,9 +190,11 @@
     .accordion-container {
         margin-top: 58px;
     }
+
     .accordion-text {
         margin-left: 40px;
     }
+
     .accordion-text h2 {
         font-family: Archivo Black;
         font-size: 6rem;
@@ -200,9 +204,27 @@
         text-align: left;
         margin-bottom: 16px;
     }
+
     .accordion-text p {
         margin-bottom: 40px;
     }
 }
 
-@media (width < 800px) {}
+@media (width < 800px) {
+    .accordion-content {
+        display: none;
+    }
+
+    .accordion-text {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .accordion-text h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .accordion-text p {}
+}
