@@ -29,7 +29,7 @@ const Accordion = ({ items }) => {
 
     const calcPosition = (index) => {
         const place = widthAcc/2
-        return place - ((11-index) * 40 )
+        return place - ((11-index) * 80 )
     }
 
 
@@ -39,6 +39,7 @@ const Accordion = ({ items }) => {
                 <h2>Unleash Your <span>Potential</span></h2>
                 <p>Step into a world where soccer transcends boundaries and becomes a transformative journey of discovery and achievement. We're more than just a destination – we're your gateway to a realm where passion meets purpose, where players, coaches, and fans alike unite in the pursuit of greatness. With a steadfast commitment to excellence and innovation, we're here to empower you to unleash your full potential on and off the field. Our holistic approach to soccer development goes beyond the game itself, encompassing personalized mentorship, immersive experiences, and sustainable practices that shape the future of the sport.</p>
             </div>
+            <div className="accordion-contentContainer">
             <div ref={accordionRef} className={`accordion-content ${someOtherExpanded ? "accordion-content-move" : ""}`}>
                 {items.map((item, index) => {
                     return (
@@ -60,6 +61,7 @@ const Accordion = ({ items }) => {
                         </div>
                     )
                 })}
+            </div>
             </div>
         </section>
     )
