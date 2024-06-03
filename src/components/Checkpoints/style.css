@@ -219,8 +219,9 @@
     .checkpoints-phone-img {
         width: 100%;
     }
-    .cp-item-phone h3  {
-        font-family: "Roboto",sans-serif;
+
+    .cp-item-phone h3 {
+        font-family: "Roboto", sans-serif;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1rem;
@@ -229,8 +230,9 @@
         color: var(--second-color);
         margin: 0;
     }
-    .cp-item-phone p  {
-        font-family: "Roboto",sans-serif;
+
+    .cp-item-phone p {
+        font-family: "Roboto", sans-serif;
         font-size: 1rem;
         font-weight: 400;
         line-height: 1rem;
@@ -239,40 +241,46 @@
         color: var(--text-color);
         margin: 0;
     }
+
     .cp-phone-mission {
         position: absolute;
         top: 1.5%;
         left: 0;
         width: 65%;
     }
-.cp-phone-dedication {
-    position: absolute;
-    top: 20%;
-    left: 33%;
-    width: 54%;
-}
-.cp-phone-excellence {
-    position: absolute;
-    top: 44.5%;
-    left: 0%;
-    width: 64%;
-}
-.cp-phone-vision {
-    position: absolute;
-    top: 66%;
-    left: 39%;
-    width: 55%;
-}
-.cp-phone-values {
-    position: absolute;
-    top: 82%;
-    left: 0%;
-    width: 64%;
-}
-.cp-phone-career {
-    position: absolute;
-    top: 100%;
-    left: 16%;
-    width: 73%;
-}
+
+    .cp-phone-dedication {
+        position: absolute;
+        top: 20%;
+        left: 33%;
+        width: 54%;
+    }
+
+    .cp-phone-excellence {
+        position: absolute;
+        top: 44.5%;
+        left: 0%;
+        width: 64%;
+    }
+
+    .cp-phone-vision {
+        position: absolute;
+        top: 66%;
+        left: 39%;
+        width: 55%;
+    }
+
+    .cp-phone-values {
+        position: absolute;
+        top: 82%;
+        left: 0%;
+        width: 64%;
+    }
+
+    .cp-phone-career {
+        position: absolute;
+        top: 100%;
+        left: 16%;
+        width: 73%;
+    }
 }
