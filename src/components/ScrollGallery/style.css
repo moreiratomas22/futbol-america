@@ -1,12 +1,13 @@
 #loop-scroll-gallery {
-    height: 80%;
-    width: 34%;
+    width: 100%;
+    max-width: 519px;
+    height: 973px;
     min-width: 250px;
     overflow: hidden;
 }
 
 .scroll-gallery-wrapper {
-    width: 400px;
+    width: 100%;
     height: 100%;
     margin: auto;
     overflow-x: hidden;
@@ -47,5 +48,12 @@
     }
     100% {
         transform: translateY(0%);
+    }
+}
+
+@media (799px < width < 1025px) {
+    #loop-scroll-gallery {
+        width: 464px;
+        height: 845px;
     }
 }

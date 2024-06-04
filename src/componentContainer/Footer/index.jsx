@@ -37,7 +37,7 @@ const Footer = () => {
                     <p>+54 9 2235 96 59 40</p>
                     <p>+54 9 9907 9023</p>
                 </div>
-                <Link to={info.toLink} onClick={handleLinkClick}><h4 className="footer-title">{info.title}</h4></Link>
+                <Link to={info.toLink} onClick={handleLinkClick} className="footer-title-link"><h4 className="footer-title">{info.title}</h4></Link>
                 <div className="footer-smIcons">
                     <img src={linkedin} alt="LinkedIn" />
                     <img src={twitterX} alt="Twitter - X" />

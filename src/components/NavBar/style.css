@@ -3,13 +3,13 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 41px;
     padding: 0;
     flex-wrap: wrap;
 }
 
 .navLinks li {
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-size: 1.125rem;
     font-weight: 800;
     line-height: 1.721rem;
@@ -30,4 +30,10 @@
 
 .navLinks .active {
     color: var(--second-color);
+}
+
+@media (width < 1025px) {
+    .navLinks {
+        display: none;
+    }
 }

@@ -56,6 +56,21 @@ const HotelSectionContainer = () => {
             <div className="hotelSection-hotelContainer">
                 <div className="hotelSection-hotel-infoContainer">
                     <p>Rest assured, your comfort and satisfaction are our top priorities at Futbol America Tours. Each hotel is meticulously selected to offer convenience, luxury, and a delightful stay, paralleling your soccer journey. Peruse our hotel options below, knowing that every detail of your trip is expertly managed with us."</p>
+                    <div className="hotelSection-phone-hotel-yellowBox"></div>
+                    <div className="hotelSection-phone-hotelGalleryContainer">
+                        <div className="hotelSection-phone-hotel-gallery">
+                            <div className={`hotelSection-hotel1 ${isSelected ? "hotelSection-hotel1Up" : ""}`} >
+                                <AutoGallery images={imagesGrandBrizo} />
+                            </div>
+                            <div className={`hotelSection-hotel2 ${isSelected ? "hotelSection-hotel2Up" : ""}`} >
+                                <AutoGallery images={imagesLandPlaza} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="hotelSection-phone-buttonsContainer">
+                        <h3 onClick={handleClick} className={`hotelSection-buttons-text ${!isSelected ? "hotelSection-buttons-textSelection" : ""}`}>Hotel Grand Brizo</h3>
+                        <h3 onClick={handleClick} className={`hotelSection-buttons-text ${isSelected ? "hotelSection-buttons-textSelection" : ""}`}>Hotel Land Plaza</h3>
+                    </div>
                     <div className="hotelSection-hotel-info-titleContainer">
                         <h2 className={`hotelSection-hotel1 ${isSelected ? "hotelSection-hotel1Up" : ""}`}>HOTEL GRAND BRIZO</h2>
                         <h2 className={`hotelSection-hotel2 ${isSelected ? "hotelSection-hotel2Up" : ""}`}>HOTEL LAND PLAZA</h2>
@@ -87,6 +102,14 @@ const HotelSectionContainer = () => {
             </div>
             <div className="hotelSection-vanContainer">
                 <div className="hotelSection-van-text">
+                    <div className="hotelSection-van-text-ImgContainer-phone">
+                        <div className="hotelSection-van-yellowBoc-phone">
+
+                        </div>
+                        <div className="hotelSection-van-imgContainer-phone">
+                            <img src={vanImg} alt="" />
+                        </div>
+                    </div>
                     <p>Our buses and vans come equipped with bathrooms, air conditioning, and DVD players for your comfort. We offer round-trip transfers between the airport and hotel, as well as transportation for friendly matches.</p>
                 </div>
                 <div className="hotelSection-van-yellowBoc">
@@ -96,7 +119,7 @@ const HotelSectionContainer = () => {
                     <img src={vanImg} alt="" />
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

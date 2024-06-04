@@ -1,13 +1,12 @@
 .button {
     border: none;
     background: none;
-    padding: 6px;
+    padding: 10px;
     border-radius: 30px;
     color: var(--main-color);
     cursor: pointer;
     width: 11.5rem;
-    height: 3.125rem;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.9rem;
     letter-spacing: -0.02em;
@@ -15,15 +14,36 @@
     font-family: Roboto;
     transition: 0.2s ease-in-out;
 }
+
 .button-white {
     background-color: var(--text-color);
 }
+
 .button-white:hover {
     background-color: var(--hover-gray);
 }
+
 .button-yellow {
     background-color: var(--second-color);
 }
+
 .button-yellow:hover {
     background-color: var(--hover-yellow);
+}
+
+@media (799px < width < 1025px) {
+    .button {
+        width: 12.5rem;
+        font-size: 1.125rem;
+    }
+}
+
+@media (width < 800px) {
+    .button {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .buttonLink {
+        width: 100%;
+    }
 }

@@ -91,3 +91,9 @@
     cursor: pointer;
     color: var(--main-color)
 }
+
+@media (width < 1025px) {
+    .dropDown {
+        display: none;
+    }
+}

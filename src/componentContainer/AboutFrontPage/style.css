@@ -4,6 +4,7 @@
     width: 100%;
     color: var(--main-color);
     position: relative;
+    overflow: hidden;
 }
 
 .about-frontPage-container img {

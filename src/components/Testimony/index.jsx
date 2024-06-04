@@ -13,7 +13,7 @@ const Testimony = ({ content }) => {
     return (
         <div className="testimonyContainer">
             <h3>{content.title}</h3>
-            <div>
+            <div className="testimonyStarsContainer">
                 {renderStars(content.stars)}
             </div>
             <p className="testimony-desc">{content.desc}</p>

@@ -1,17 +1,18 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useCallback } from "react";
 
-import "./style.css"
-import useIntersectionObserver from "../../customHook/useIntersectionObserver"
+import "./style.css";
+import useIntersectionObserver from "../../customHook/useIntersectionObserver";
 
 const ScrollGallery = ({ images, inverted = false }) => {
+    const galleryContainerRef = useRef(null);
+    const galleryRef = useRef(null);
+    const isVisible = useIntersectionObserver(galleryRef, { threshold: 1 });
+    const [animationStarted, setAnimationStarted] = useState(false);
 
-    const galleryContainerRef = useRef(null)
-    const galleryRef = useRef(null)
-    const isVisible = useIntersectionObserver(galleryRef, { threshold: 1 })
-    const [animationStarted, setAnimationStarted] = useState(false)
-
-    const scrollToFinal = (duration) => {
+    const scrollToFinal = useCallback((duration) => {
         const container = galleryContainerRef.current;
+        if (!container) return; // Add this line to check for null
+
         const start = inverted ? container.scrollHeight : 0;
         const final = inverted ? 0 : container.scrollHeight;
         const startTime = performance.now();
@@ -27,38 +28,39 @@ const ScrollGallery = ({ images, inverted = false }) => {
         };
 
         requestAnimationFrame(scroll);
-    };
+    }, [inverted]);
 
     useEffect(() => {
-        if (!animationStarted) {
+        if (!animationStarted && galleryContainerRef.current) {
             if (inverted) {
                 galleryContainerRef.current.scrollTop = galleryContainerRef.current.scrollHeight;
-                setAnimationStarted(true)
+                setAnimationStarted(true);
                 setTimeout(() => {
-                    scrollToFinal(9000)
-                }, 0)
+                    scrollToFinal(9000);
+                }, 0);
             } else {
-                setAnimationStarted(true)
+                setAnimationStarted(true);
                 setTimeout(() => {
-                    scrollToFinal(9000)
-                }, 1500)
+                    scrollToFinal(9000);
+                }, 1500);
             }
         }
-    }, [isVisible])
+    }, [isVisible, animationStarted, inverted, scrollToFinal]);
 
     return (
         <div ref={galleryRef} id="loop-scroll-gallery">
-            <div className={`scroll-gallery-wrapper ${animationStarted && !inverted ? "scroll-gallery-wrapper-animation" : ""} ${animationStarted && inverted ? "scroll-gallery-wrapper-animation-inverted" : ""}`} ref={galleryContainerRef}>
-                {images.map((image, index) => {
-                    return (
-                        <div key={index} className="scroll-gallery-image-container">
-                            <img src={image} alt="" loading="lazy" />
-                        </div>
-                    )
-                })}
+            <div
+                className={`scroll-gallery-wrapper ${animationStarted && !inverted ? "scroll-gallery-wrapper-animation" : ""} ${animationStarted && inverted ? "scroll-gallery-wrapper-animation-inverted" : ""}`}
+                ref={galleryContainerRef}
+            >
+                {images.map((image, index) => (
+                    <div key={index} className="scroll-gallery-image-container">
+                        <img src={image} alt="" loading="lazy" />
+                    </div>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ScrollGallery
+export default ScrollGallery;

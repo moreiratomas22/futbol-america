@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    max-width: 1140px;
-    margin: auto;
+    width: 100%;
+    margin-top: 24px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -13,12 +12,13 @@
 }
 
 .title {
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.721rem;
     letter-spacing: -0.02em;
     text-align: left;
+    margin-left: 80px;
 }
 
 .yellowColor {
@@ -34,6 +34,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 41px;
     flex-wrap: wrap;
+    margin-right: 80px;
+}
+
+@media (799px < width < 1025px) {
+    .header {
+        max-width: 1024px;
+    }
+
+    .title {
+        margin-left: 40px;
+    }
+
+    .navOptions {
+        margin-right: 40px;
+    }
+}
+
+@media (width < 800px) {
+    .title {
+        margin-left: 16px;
+    }
+
+    .navOptions {
+        margin-right: 16px;
+    }
 }

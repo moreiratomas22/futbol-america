@@ -1,11 +1,12 @@
 .timelapse-container {
+    margin-top: 295px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 200px;
     color: var(--text-color);
-    width: 90%;
-    max-width: 1140px;
-    margin: 40px auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 }
 
@@ -14,13 +15,13 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 16%;
-    min-width: 180px;
+    width: 220px;
+    box-sizing: border-box;
 }
 
 .timelapse-card-imgContainer {
     width: 80px;
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,12 +30,19 @@
     background-color: var(--main-color);
 }
 
+.timelapse-card-imgContainer img {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
 .timelapse-card h3 {
     font-family: Roboto;
     font-size: 1.25rem;
     font-weight: 900;
     line-height: 1.4rem;
     text-align: left;
+    margin: 0;
+    margin-top: 18px;
 }
 
 .yellowTitle {
@@ -47,7 +55,8 @@
     font-weight: 400;
     line-height: 1.56rem;
     text-align: center;
-    height: 10rem;
+    margin: 0;
+    margin-top: 16px;
 }
 
 .timelapse-line {
@@ -67,13 +76,79 @@
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
 }
 
-@media (width < 1000px) {
+@media (799px < width < 1025px) {
     .timelapse-container {
-        overflow-x: scroll;
+        margin-top: 129px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 129px;
+    }
+
+    .timelapse-card {
+        width: 174px;
+    }
+
+    .timelapse-card-imgContainer {
+        width: 54px;
+        height: 40px;
+    }
+
+    .timelapse-card h3 {
+        font-size: 1rem;
+        line-height: 1.172rem;
+    }
+
+    .timelapse-card p {
+        font-size: 1rem;
+        line-height: 1.26rem;
+    }
+
+    .timelapse-line {
+        top: 12%;
+    }
+}
+
+@media (width < 800px) {
+    .timelapse-container {
+        margin-top: 116px;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 80px;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .timelapse-line {
+        display: none;
+    }
+
+    .timelapse-card {
+        width: 220px;
+    }
+
+    .timelapse-card-imgContainer {
+        width: 54px;
+        height: 40px;
+    }
+
+    .timelapse-card h3 {
+        font-size: 1rem;
+        line-height: 1.172rem;
+        margin-top: 16px;
+        color: var(--second-color);
+    }
+
+    .timelapse-card p {
+        font-size: 1rem;
+        line-height: 1.172rem;
+        margin-top: 8px;
+        height: fit-content;
     }
 }

@@ -1,8 +1,7 @@
 .teamGallery-container {
-    width: 90%;
-    max-width: 1140px;
-    margin: auto;
-    height: 100vh;
+    margin-top: 275px;
+    margin-left: 80px;
+    margin-right: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +10,7 @@
 .teamGallery-imageContainer {
     overflow: hidden;
     width: 50%;
-    height: 80%;
+    height: 100vh;
 }
 
 .teamGallery-imageContainer img {
@@ -56,8 +55,9 @@
     letter-spacing: -0.02em;
     text-align: left;
     color: var(--second-color);
-    height: 1.25rem;
     overflow: hidden;
+    margin: 0;
+    margin-bottom: 42px;
 }
 
 .teamGallery-desc {
@@ -67,8 +67,9 @@
     line-height: 1.25rem;
     letter-spacing: -0.02em;
     text-align: left;
-    height: 25rem;
+    height: 20rem;
     overflow: hidden;
+    margin: 0;
 }
 
 .teamGallery-buttons {
@@ -146,5 +147,65 @@
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@media (799px < width < 1025px) {
+    .teamGallery-container {
+        margin-top: 218px;
+        margin-left: 40px;
+        margin-right: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .teamGallery-imageContainer {
+        overflow: hidden;
+        width: 58%;
+        height: 65vh;
+    }
+
+    .teamGallery-name {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: 40px;
+        margin-top: 176px;
+    }
+
+    .teamGallery-desc {
+        font-size: 1rem;
+        line-height: 1rem;
+        height: 17rem;
+    }
+}
+
+@media (width < 800px) {
+    .teamGallery-container {
+        margin-top: 300px;
+        margin-left: 16px;
+        margin-right: 16px;
+        flex-direction: column;
+    }
+    .teamGallery-imageContainer {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 20px;
+    }
+    .teamGallery-content {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .teamGallery-name {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-bottom: 24px;
+        margin-top: 66px;
+    }
+    
+    .teamGallery-desc {
+        font-size: 1rem;
+        line-height: 1rem;
     }
 }

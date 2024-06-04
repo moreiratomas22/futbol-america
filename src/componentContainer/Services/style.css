@@ -1,3 +1,10 @@
+.services-testimoniesSection {
+    margin-top: 261px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 166px;
+}
+
 .services-testimoniesSection h2 {
     color: var(--text-color);
     font-family: Archivo Black;
@@ -6,6 +13,7 @@
     line-height: 6rem;
     letter-spacing: -0.02em;
     text-align: center;
+    margin-bottom: 80px;
 }
 
 .services-testimoniesSection h2 span {
@@ -13,13 +21,64 @@
 }
 
 .services-testimoniesContainer {
-    width: 90%;
+    width: auto;
     height: auto;
-    max-width: 1140px;
-    margin: 50px auto;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+}
+
+@media (799px < width < 1025px) {
+    .services-testimoniesSection {
+        margin-top: 136px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .services-testimoniesContainer {
+        gap: 12px;
+    }
+    .services-testimoniesSection h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
+
+@media (width < 800px) {
+    .services-testimoniesSection{
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 60px;
+        margin-bottom: 80px;
+    }
+    .services-testimoniesSection h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        text-align: left;
+        width: 18rem;
+        margin-bottom: 40px;
+    }
+    .services-testimoniesContainer {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    .services-testimoniesContainer::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .services-testimoniesContainer::-webkit-scrollbar-thumb {
+        background-color: var(--second-color);
+        border-radius: 6px;
+    }
+    
+    .services-testimoniesContainer::-webkit-scrollbar-track {
+        width: 100%;
+        background-color: var(--main-color);
+        border-radius: 6px;
+    }
 }
