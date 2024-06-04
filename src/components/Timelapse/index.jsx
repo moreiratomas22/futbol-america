@@ -18,11 +18,13 @@ import useIntersectionObserver from "../../customHook/useIntersectionObserver";
 const Timelapse = () => {
     const elementRef = useRef(null);
     const isVisible = useIntersectionObserver(elementRef, { threshold: 1 });
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
     const [isGold, setIsGold] = useState([])
 
 
-    useEffect(()=> {
+    useEffect(() => {
         const cards = document.querySelectorAll(".timelapse-card")
         setIsGold(prev => {
             return new Array(cards.length).fill(false)
@@ -30,25 +32,33 @@ const Timelapse = () => {
     }, [])
 
     useEffect(() => {
-        if (isVisible) {
-            const line = document.querySelector(".timelapse-line")
+        if (windowWidth >= 800) {
+            if (isVisible) {
+                const line = document.querySelector(".timelapse-line")
+                const cards = document.querySelectorAll(".timelapse-card")
+                const titles = document.querySelectorAll(".timelapse-card h3")
+                setTimeout(() => {
+                    line.classList.add("timelapse-line-animation")
+                    cards.forEach((_, i) => {
+                        setTimeout(() => {
+                            titles[i].classList.add("yellowTitle")
+                            setIsGold((prev) => {
+                                const newIsGold = [...prev];
+                                newIsGold[i] = true;
+                                return newIsGold;
+                            });
+                        }, i * 1000); // Incremental delay for each card
+                    });
+                }, 2000)
+            }
+        } else {
             const cards = document.querySelectorAll(".timelapse-card")
-            const titles = document.querySelectorAll(".timelapse-card h3")
-            setTimeout(()=>{
-                line.classList.add("timelapse-line-animation")
-                cards.forEach((_, i) => {
-                    setTimeout(() => {
-                        titles[i].classList.add("yellowTitle")
-                        setIsGold((prev) => {
-                            const newIsGold = [...prev];
-                            newIsGold[i] = true;
-                            return newIsGold;
-                        });
-                    }, i * 1000); // Incremental delay for each card
-                });
-            },2000)
+            setIsGold(prev => {
+                return new Array(cards.length).fill(true)
+            })
         }
-    }, [isVisible]);
+        
+    }, [isVisible, windowWidth]);
 
     return (
         <section ref={elementRef} className="timelapse-container">
