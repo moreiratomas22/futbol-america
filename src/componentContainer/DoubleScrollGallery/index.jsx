@@ -50,7 +50,7 @@ const DoubleScrollGallery = () => {
     return (
         <section className="doubleScrollGallery">
             <div className={`doubleScrollGallery-textContainer ${isGalleryAtTop ? "doubleScrollGallery-opacity0" : "doubleScrollGallery-opacity1"}`}>
-                <p className="doubleScrollGallery-text">At <span>Futbol</span> America, we are dedicated to providing university soccer teams with comprehensive and unforgettable experiences in Argentina and Brazil.</p>
+                <p className="doubleScrollGallery-text">At <span>Futbol</span> America, we are dedicated to providing soccer teams with comprehensive and unforgettable experiences in Argentina and Brazil.</p>
             </div>
             <div ref={galleriesRef} className={`doubleScrollGallery-galleryContainer ${isGalleryAtTop && !isVideoAtTop ? "doubleScrollGallery-opacity1" : "doubleScrollGallery-opacity0"}`}>
                 {isGalleryAtTop && (
